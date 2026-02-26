@@ -1,0 +1,11 @@
+body { scroll-behavior: smooth; }
+
+.hero { min-height: 100vh; background: linear-gradient(120deg, #0d6efd, #6610f2); color: white; display: flex; align-items: center; animation: fadeIn 1.5s ease-in; }
+
+.section-padding { padding: 60px 0; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+.feature-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+
+.feature-card:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); }
