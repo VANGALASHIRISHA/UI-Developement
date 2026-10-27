@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myh1">Hello</h1>
+    <h1 class="ch">Dr Reddys Foundation</h1>
+    <h1 class="ch">InvokEit</h1>
+  <p class="ch">A paragraph is a self-contained unit of writing, typically featuring a topic sentence, supporting details, and a concluding sentence, all focused on a single, unified idea. Structurally, it consists of multiple sentences that develop a specific point, often indicated by an indent or white space to aid readability.</p>
+      <button onclick="Changeit()">Change Style</button>
+    <script>
+        function Changeit(){
+        document.getElementById("myh1").style.fontFamily="Arival,sans-serif";
+        }
+
+        function Changeit()
+        {
+            var arr=document.getElementsByTagName("h1");
+            var arr=document.getElementsByClassName("ch")
+            console.log(arr);
+            arr[0].style.color="red"
+            arr[1].style.backgroundColor="green"
+            arr[2].style.color="blue"
+        }
+        function Changeit(){
+            document.querySelector("h1.ch").style.color="red"
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
+
+
+

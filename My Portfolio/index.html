@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: AliceBlue;
+            color: #003366;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+        }
+
+        .nav-link {
+            color: #003366 !important;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .btn-custom {
+            background-color: #003366;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #002244;
+        }
+
+        .card {
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 1s;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Portfolio</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container fade-in">
+        <img src="your-photo.jpg" class="rounded-circle mb-3" width="150" alt="Profile">
+        <h2>Vangala Shirisha</h2>
+        <h5>Backend Developer</h5>
+        <p>Full Stack Developer (Fresher)</p>
+
+        <a href="tel:8008973152" class="btn btn-custom m-2">Call Me</a>
+        <a href="mailto:shirishavangala414@gmail.com" class="btn btn-outline-dark m-2">Email Me</a>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section">
+    <div class="container fade-in">
+        <h2 class="text-center mb-4">Skills</h2>
+
+        <div class="row text-center">
+            <div class="col-md-4 mb-3">
+                <div class="card p-3">HTML, CSS, Bootstrap</div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card p-3">JavaScript</div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card p-3">Java, Spring Boot</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Resume Section -->
+<section class="section text-center fade-in">
+    <div class="container">
+        <h2>Resume</h2>
+        <a href="resume.pdf" download class="btn btn-custom mt-3">Download Resume</a>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+    <div class="container fade-in">
+        <h2 class="text-center mb-4">Projects</h2>
+
+        <div class="row">
+
+            <!-- Project 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="project1.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Career Guidance App</h5>
+                        <p>Helps students choose career paths.</p>
+                        <a href="#" class="btn btn-custom btn-sm">Live Demo</a>
+                        <a href="#" class="btn btn-outline-dark btn-sm">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="project2.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5>E-Commerce CRUD</h5>
+                        <p>Product management system using JSP.</p>
+                        <a href="#" class="btn btn-custom btn-sm">Live Demo</a>
+                        <a href="#" class="btn btn-outline-dark btn-sm">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="project3.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Library Management</h5>
+                        <p>Book issuing and tracking system.</p>
+                        <a href="#" class="btn btn-custom btn-sm">Live Demo</a>
+                        <a href="#" class="btn btn-outline-dark btn-sm">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <div class="container fade-in">
+        <h2 class="text-center mb-4">Contact</h2>
+
+        <form>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Your Email">
+            </div>
+
+            <div class="mb-3">
+                <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+            </div>
+
+            <button class="btn btn-custom">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Vangala Shirisha</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Fade-in animation on scroll
+    const elements = document.querySelectorAll('.fade-in');
+
+    window.addEventListener('scroll', () => {
+        elements.forEach(el => {
+            const position = el.getBoundingClientRect().top;
+            const screen = window.innerHeight;
+
+            if (position < screen - 100) {
+                el.classList.add('show');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

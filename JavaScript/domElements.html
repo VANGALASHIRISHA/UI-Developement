@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        button.lg{
+            background-color: blue;
+        }
+        button{
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <label>Username: </label>
+    <input type="text" id="username" placeholder="Enter Username"><br><br>
+       <label>Password: </label>
+    <input  type="password" id="password" placeholder="Enter Valid Password"><i class="fa-solid fa-eye" onclick="togglePassword()"></i>
+    <br><br>
+    <button class="lg" onclick="Changeit()">Login</button>
+    <button>Cancel</button>
+</form>
+<script>
+//     function togglePassword(){
+//     var pwdfield = document.getElementById("password");
+
+//     pwdfield.type = pwdfield.type === "password" 
+//         ? document.getElementById("password").type = "text"
+//         : document.getElementById("password").type = "password";
+// }
+    function togglePassword(){
+        var pwdfield=document.getElementById("password");
+        pwdfield.type=="password" ? document.getElementById("password").type="text"
+          : document.getElementById("password").type="password";
+        
+    }
+    function Changeit(){
+    var Uname=document.getElementById("username").value;
+    var pwd=document.getElementById("password").value;
+    var reqpwd=Uname.slice(0,3)+"123";
+    if(reqpwd==pwd)
+{
+    alert("Login SuccessFull")
+}
+else{
+    alert("Incorrect Password")
+}
+    }
+
+
+
+    
+
+</script>
+</body>
+</html>

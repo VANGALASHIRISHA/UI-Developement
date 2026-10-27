@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="result"></h2>
+    <script>
+var employee={
+id:101,
+name:"jeeva",
+salary:10.5
+};
+document.getElementById('result').innerHTML=JSON.stringify(employee);
+document.write(employee.id,employee.name,employee.salary)
+document.write(Object.keys(employee))
+document.write(Object.values(employee))
+    </script>
+    
+</body>
+</html>

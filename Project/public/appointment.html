@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appointment</title>
+<style>
+header{
+    display:flex;
+    border:2px solid aliceblue;
+    background-color: aliceblue;
+    padding:10px;
+}
+img{
+    position: relative;
+    left:20px;
+}
+.container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#003366;
+}
+h2{
+    position: relative;
+    left:30px;
+}
+.nav{
+    position: absolute;
+    background-color: aliceblue;
+    text-align: center;
+    padding:20px;
+    left:600px ;
+    font-size:18px;
+    font-weight: bold;
+}
+.nav a{
+    margin:0 15px;
+    text-decoration:none;
+    color:#003366;
+}
+hr{
+    margin-top:-10px;
+}
+.appointment{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    min-height:60vh;
+    padding:40px 20px;
+    background-color:#f4f9ff;
+    color:#003366;
+}
+form{
+    width:400px;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:8px;
+    margin-bottom:15px;
+    border:1px solid lightgray;
+    border-radius:5px;
+}
+button{
+    width:100%;
+    padding:12px;
+    background:#003366;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+}
+button:hover{
+    background:#0055aa;
+}
+.cont{
+    display:flex;
+    justify-content:space-between;
+    background:linear-gradient(to right,#5f8fb3,#1f3f5b);
+    color:white;
+    padding:40px;
+    flex-wrap:wrap;
+}
+ul{
+    list-style:none;
+    padding:0;
+}
+ul li{
+    margin:6px 0;
+}
+.copy{
+     position: relative;
+    top: -20px;
+    text-align:center;
+    background:linear-gradient(to left,#1f3f5b,#5f8fb3);
+    color:white;
+    padding:10px;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+    <img src="icon.png" width="35px">
+    <h2>ClearVison</h2>
+</div>
+<nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="doctors.html">Doctors</a>
+    <a href="services.html">Services</a>
+    <a href="appointment.html">Appointment</a>
+    <a href="#contact">Contact Us</a>
+</nav>
+</header>
+<hr>
+<div class="appointment">
+<h1>Book an Appointment</h1>
+<p>Fill in the form below and we'll schedule your visit.</p>
+<form>
+<label>Full Name*</label>
+<input type="text" placeholder="John Doe" required>
+<label>Age</label>
+<input type="number" placeholder="30">
+<label>Phone Number*</label>
+<input type="tel" placeholder="9876543210" pattern="[0-9]{10}" required>
+<label>Preferred Date</label>
+<input type="date" required>
+<label>Select Doctor</label>
+<select required>
+<option value="">Choose a doctor</option>
+<option>Dr. Rajesh</option>
+<option>Dr. Priya</option>
+<option>Dr. Kumar</option>
+</select>
+<label>Eye Problem / Reason for Visit</label>
+<textarea rows="4" placeholder="Describe your symptoms or reason..."></textarea>
+<button type="submit">Book Appointment</button>
+</form>
+</div>
+<footer>
+<div class="cont" id="contact">
+<div>
+<h2>ClearVison EyeClinic</h2>
+<p>Your trusted partner for comprehensive eye care and vision health</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<ul>
+<li>About Us</li>
+<li>Services</li>
+<li>Our Doctors</li>
+<li>Appointment</li>
+</ul>
+</div>
+<div>
+<h4>Services</h4>
+<ul>
+<li>Eye Checkup</li>
+<li>Cataract Surgery</li>
+<li>Retina Treatment</li>
+<li>Vision Testing</li>
+</ul>
+</div>
+<div>
+<h4>Contact Us</h4>
+<p>Ameenpur, Medchal City</p>
+<p>9912149306</p>
+<p>clearvision@gmail.com</p>
+</div>
+</div>
+<p class="copy">© 2026 ClearVison Eye Clinic</p>
+</footer>
+</body>
+</html>

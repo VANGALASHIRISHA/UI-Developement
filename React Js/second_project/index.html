@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2 - Form Validation</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5;">
+
+  <h2 style="color: #333;">User Registration Form</h2>
+
+  <form id="registrationForm" action="/submit" method="POST" style="background-color: #fff; padding: 20px; border-radius: 10px; width: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" style="width: 100%; padding: 5px; margin-bottom: 10px;"><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" style="width: 100%; padding: 5px; margin-bottom: 10px;"><br>
+
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" style="width: 100%; padding: 5px; margin-bottom: 10px;"><br>
+
+    <button type="submit" style="padding: 5px 15px; background-color: #4CAF50; color: white; border: none; border-radius: 5px;">Submit</button>
+    
+  </form>
+
+  <p id="errorMsg" style="color: red; font-weight: bold;"></p>
+
+  <!-- Inline JavaScript for client-side validation -->
+  <script>
+    const form = document.getElementById('registrationForm');
+    form.onsubmit = function(e) {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const age = document.getElementById('age').value.trim();
+      let error = '';
+
+      if(name === '') error += 'Name is required. ';
+      if(email === '') error += 'Email is required. ';
+      if(age === '' || age < 1) error += 'Valid age is required.';
+
+      if(error) {
+        document.getElementById('errorMsg').innerText = error;
+        e.preventDefault(); // prevent form submission
+      }
+    }
+  </script>
+
+</body>
+</html>

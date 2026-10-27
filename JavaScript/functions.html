@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="output">Hii...</h2>
+    <script>
+function message(x,y)
+{
+ad=x+y;
+    document.getElementById("output").innerHTML=ad;
+}
+message(10,5);
+    </script>
+    <h2 id="output">Hii...</h2>
+    <h2 id="output2">Hii...</h2>
+    <script>
+function message(x,y)
+{
+ad=x+y;
+    document.getElementById("output").innerHTML="x="+x+" "+"y= "+y;
+    return ad;
+}
+//message(10,5);
+//document.write(add(10,5));
+document.getElementById("output2").innerHTML=message(10,5);
+    </script>
+    <h2 id="output"></h2>
+    <script>
+        function add(x,y,z,a)
+        {
+            var ad=x+y;
+            document.getElementById("output").innerHTML=arguments.length;
+        }
+        add(10,20,30,40);
+
+
+    </script>
+</body>
+</html>

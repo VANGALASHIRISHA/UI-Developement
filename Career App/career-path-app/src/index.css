@@ -1,0 +1,144 @@
+body {
+  background: #eef2ff;
+  color:#333;
+}
+
+.page-center {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  padding: 32px;
+  width: 360px;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.card button {
+  width: 100%;
+  padding: 10px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #4338ca;
+}
+
+.card p {
+  margin-top: 15px;
+}
+/* ===== BUTTON ===== */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0a58ca;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #084298;
+}
+
+/* ===== LINK TEXT ===== */
+.auth-link {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.auth-link a {
+  color: #0a58ca;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background-color: #0a58ca;
+  color: white;
+  padding: 15px 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ===== HOME PAGE ===== */
+.home-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.home-container h1 {
+  color: #0a58ca;
+  margin-bottom: 15px;
+}
+
+.home-container p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ===== FLOW CARDS ===== */
+.flow-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.flow-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.flow-card:hover {
+  transform: translateY(-5px);
+}
+
+.flow-card h3 {
+  color: #0a58ca;
+  margin-bottom: 8px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  margin-top: 40px;
+  padding: 15px;
+  background-color: #0a58ca;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}

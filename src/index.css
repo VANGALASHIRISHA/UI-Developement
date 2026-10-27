@@ -1,0 +1,379 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --orange: #ff7a00;
+  --orange-deep: #e56d00;
+  --royal: #2e2aa8;
+  --royal-light: #4a44d0;
+  --ink: #1e293b;
+  --surface: #f5f8ff;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html,
+body {
+  background: #ffffff;
+  color: var(--ink);
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--orange);
+  color: #fff;
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--royal), var(--orange));
+  border-radius: 10px;
+}
+
+.container-px {
+  @apply px-6 sm:px-8 lg:px-12 xl:px-20;
+}
+
+.text-gradient {
+  background-image: linear-gradient(100deg, var(--royal) 0%, var(--royal-light) 45%, var(--orange) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Premium orange gradient — used for the Services section heading only */
+.text-gradient-orange {
+  background-image: linear-gradient(100deg, var(--orange-deep) 0%, var(--orange) 50%, #ffb347 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.01em;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(45, 35, 168, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(45, 35, 168, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, var(--ink) 0%, var(--ink) 40%, var(--orange) 50%, var(--ink) 60%, var(--ink) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 3.5s linear infinite;
+}
+
+.spark-underline {
+  position: relative;
+  display: inline-block;
+}
+.spark-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12'%3E%3Cpath d='M2 9 Q 30 -2 60 6 T 118 4' fill='none' stroke='%23FF7A00' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.mask-fade-x {
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
+
+/* Hides the scrollbar on the desktop nav's own horizontal track — used
+   only as a safety net so links never wrap or get clipped near the
+   992px floor; the row can scroll internally instead. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Offset anchored sections so the sticky 80px navbar never covers them */
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+/* Navbar link hover — orange underline, slight color shift, no bounce */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--orange);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.21, 0.47, 0.32, 0.98);
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+.nav-link:hover {
+  color: var(--orange) !important;
+}
+
+/* Active menu item — persistent orange underline (current section / open dropdown) */
+.nav-link-active::after {
+  transform: scaleX(1);
+}
+.nav-link-active {
+  color: var(--orange) !important;
+}
+
+/* ============================================================
+   Signature "Q" brand animation
+   — sized up, brighter glow, soft outer halo + rotating energy ring.
+   The logo mark itself never shifts position; only glow/ring layers
+   (absolutely positioned, out of flow) and the travelling clone move,
+   so the wordmark text next to it stays perfectly still.
+   ============================================================ */
+
+/* Large, soft ambient halo behind everything — the "always visible" glow */
+.brand-q-halo {
+  position: absolute;
+  inset: -14px;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 122, 0, 0.5) 0%,
+    rgba(255, 122, 0, 0.22) 45%,
+    rgba(255, 122, 0, 0) 74%
+  );
+  filter: blur(4px);
+  opacity: 0.9;
+  pointer-events: none;
+  animation: q-halo-pulse 3.8s ease-in-out 1.6s infinite;
+}
+
+@keyframes q-halo-pulse {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(0.94);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* Slowly rotating dashed energy ring — subtle, elegant, continuous */
+.brand-q-orbit {
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  pointer-events: none;
+  opacity: 0.75;
+  background:
+    conic-gradient(
+      from 0deg,
+      transparent 0%,
+      rgba(255, 122, 0, 0.85) 12%,
+      transparent 28%,
+      transparent 72%,
+      rgba(45, 35, 168, 0.55) 88%,
+      transparent 100%
+    );
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px));
+  animation: q-orbit-spin 7s linear infinite;
+}
+
+@keyframes q-orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Logo entrance + idle pulse — the ring */
+.brand-q-ring {
+  position: absolute;
+  inset: -5px;
+  border-radius: 9999px;
+  border: 2px solid rgba(255, 122, 0, 0.65);
+  opacity: 0;
+  pointer-events: none;
+  animation:
+    q-ring-intro 1.5s cubic-bezier(0.21, 0.47, 0.32, 0.98) 0.2s 1 both,
+    q-ring-loop 3.4s ease-in-out 1.9s infinite;
+}
+
+/* Logo entrance + idle pulse — the glow on the mark itself */
+.brand-q-mark {
+  display: block;
+  animation:
+    q-glow-intro 1.6s cubic-bezier(0.21, 0.47, 0.32, 0.98) 0.1s 1 both,
+    q-glow-loop 3.6s ease-in-out 1.8s infinite;
+}
+
+@keyframes q-ring-intro {
+  0% {
+    opacity: 0;
+    transform: scale(0.55);
+  }
+  45% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.95);
+  }
+}
+
+@keyframes q-ring-loop {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.25);
+  }
+}
+
+@keyframes q-glow-intro {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.88);
+    filter: drop-shadow(0 0 0 rgba(255, 122, 0, 0));
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 32px rgba(255, 122, 0, 1))
+      drop-shadow(0 0 12px rgba(255, 122, 0, 0.9));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 16px rgba(255, 122, 0, 0.85))
+      drop-shadow(0 0 4px rgba(255, 122, 0, 0.7));
+  }
+}
+
+@keyframes q-glow-loop {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 12px rgba(255, 122, 0, 0.65))
+      drop-shadow(0 0 3px rgba(255, 122, 0, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 26px rgba(255, 122, 0, 1))
+      drop-shadow(0 0 8px rgba(255, 122, 0, 0.85));
+  }
+}
+
+/* The travelling clone that flies from the logo to a Q-word and back */
+.q-flyer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  z-index: 9999;
+  pointer-events: none;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 0 9px rgba(255, 122, 0, 0.95))
+    drop-shadow(0 0 22px rgba(255, 122, 0, 0.6));
+}
+
+/* Any word beginning with Q is a potential landing target */
+.q-word-target {
+  display: inline;
+}
+
+.q-first-letter {
+  display: inline-block;
+  transition: color 0.28s ease, text-shadow 0.28s ease, transform 0.28s ease;
+}
+
+/* Applied briefly when the flying Q "merges" into a word's first letter */
+.q-merge-glow {
+  color: var(--orange);
+  transform: scale(1.08);
+  text-shadow: 0 0 10px rgba(255, 122, 0, 0.65), 0 0 22px rgba(255, 122, 0, 0.35);
+}
+
+/* ============================================================
+   Footer particles
+   ============================================================ */
+.footer-particle {
+  position: absolute;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(255, 122, 0, 0.9), rgba(255, 122, 0, 0));
+  pointer-events: none;
+  animation: particle-drift ease-in-out infinite;
+}
+
+@keyframes particle-drift {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(var(--drift-x, 12px), -26px) scale(1.15);
+    opacity: 0.65;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.25;
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myh1"></h1>
+    <button onclick="startTimer()">Start</button>
+     <button onclick="pauseTime()">Pause</button>
+      <button onclick="resetTimer()">Reset</button>
+    <script>
+        function hello()
+        {
+        document.writeln("Hello World")
+        }
+        setInterval(hello,1000);
+        var d=new Date();
+        document.writeln(d.toLocaleTimeString());
+        function startTime()
+        {
+            var d=new Date();
+            document.getElementById("myh1").innerHTML=d.toLocaleTimeString();
+        }
+     setInterval(startTime,1000);
+    var seconds=0,mins=0,hours=0;
+    var store;
+
+    function startTimer(){
+     store=setInterval(timer,1000);
+
+    }
+    function pauseTime(){
+        clearInterval(store);
+    
+    }
+
+    function  resetTimer(){
+        seconds=0;
+        mins=0;
+        hours=0;
+        document.getElementById("myh1").innerHTML=`${hours.toString().padStart(2,"0")}hrs:
+                                             ${mins.toString().padStart(2,"0")}mins:
+                                             ${seconds.toString().padStart(2,"0")}s`
+    }
+    function timer()
+ {
+    seconds++;
+
+    if(seconds==59)
+    {
+        mins++;
+        seconds=0;
+    }
+
+    if(mins==59)
+    {
+        hours++;
+        mins=0;
+        seconds=0;
+    }
+    document.getElementById("myh1").innerHTML =
+        `${hours.toString().padStart(2,"0")}hrs:
+         ${mins.toString().padStart(2,"0")}mins:
+         ${seconds.toString().padStart(2,"0")}s`;
+}
+    
+ </script>
+</body>
+</html>

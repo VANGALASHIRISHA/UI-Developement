@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('This is onclick event')">Click</button>
+    <button id="btn">Click</button>
+    <script>
+
+var b=document.getElementById("btn")
+b.onclick=function(){
+    alert("This is onclick event -Second method")
+}
+    </script>
+    <button id="btn">Click</button>
+    
+<script>
+var b=document.getElementById("btn")
+b.addEventListener('mousedown',function(){
+alert("This is onclick event-Third Method")
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var n=1;
+    
+        while(n<=100){
+         document.writeln(n)
+            n++;
+        }
+    </script>
+     <script>
+
+        var n=1;
+    do{
+        document.writeln(n);
+        n++;
+    }while(n>=100) 
+    </script>
+<script>
+    for(var i=1;i<=100;i++){
+
+        document.writeln(i)
+}
+    </script>
+    <script>
+    var a=[10,20,30,40,50,60,70]
+    for(i of a)
+    {
+        document.write(i+"<br>");
+    }
+    </script>
+    <script>
+        var student={
+            id:101,
+            name:"varun",
+            fee:20000
+        }
+        for(key in student)
+        document.write(student[key])
+    </script>
+</script>
+    <script>
+    var a=[10,20,30,40,50,60,70]
+    for(i in a)
+    {
+        document.write(a[i]+"<br>");
+        if(i<4)
+        continue;
+    document.write("Java Script");
+    }
+    </script>
+    <script>
+        myblock:
+        {
+
+            document.write("Java Script")
+            break myblock;
+            document.write("Java Script by venu Gopal Chary")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onmouseover="this.style.color='green'">Java Script</h1>
+    <h1 onmouseleave="this.style.color='red'">Java Script</h1>
+<h2 id="text">Java Scrpt</h2>
+<script>
+var obj=document.getElementById('text')
+obj.onmousedown=function(){
+
+this.style.color='yellow'
+}
+obj.onmouseup=function(){
+
+this.style.color='deeppink'
+}
+</script> 
+<h2 onclick="this.innerText='EveryOne'">Hi Siri</h2>
+<h2 onclick="this.innerText='Hide'">Show</h2>
+<button id="btn">Click</button>
+<h3 id="text1"></h3>
+<h3 id="text2"></h3>
+<script>
+let btn=document.getElementById('btn')
+btn.addEventListener('click',function(){
+
+document.getElementById("text1").innerHTML="hi siri"
+})
+btn.addEventListener('click',function(){
+
+document.getElementById("text2").innerHTML="Everyone"
+})
+</script>
+</body>
+</html>
