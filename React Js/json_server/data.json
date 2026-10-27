@@ -1,0 +1,47 @@
+{
+  "products": [
+    {
+      "id": "311f",
+      "name": "SamSung",
+      "price": "30000",
+      "category": "Electronics"
+    },
+    {
+      "id": "d6d9",
+      "name": "Moto Mobile",
+      "price": "28000",
+      "category": "Clothing"
+    },
+    
+  {
+    "id": 1,
+    "name": "Phone",
+    "price": 10000,
+    "category": "Electronics"
+  },
+
+
+    {
+      "id": "9533",
+      "name": "Fridze",
+      "price": "200000",
+      "category": "Electronics"
+    },
+    {
+      "id": "5ea4",
+      "name": "Laptop",
+      "price": "60000",
+      "category": "Electronics"
+    }
+  ],
+  "orders": [
+    {
+      "id": "123456",
+      "Date": "21/02/2024"
+    },
+    {
+      "id": "123456",
+      "Date": "21/01/2024"
+    }
+  ]
+}

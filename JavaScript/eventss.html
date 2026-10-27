@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body  onload="test1()" onunload="test2">
+<script>
+    function test1()
+    {
+        //console.log("Ex on onload event")
+        document.write("Ex on onload event")
+    }
+    function test2()
+    {
+        //console.log("Ex on onload event")
+alert("Ex on onunload event")
+    }
+</script>
+ Enter Name:<input type="text" onchange="upper(this)">
+<script>
+   
+function upper(obj)
+{
+    //alert("hii..")
+    obj.value=obj.value.toUpperCase();
+}
+</script> 
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onoffline="displaymsg()" ononline="displaymsg2()">
+    <h1 id="myh1">Hello World</h1>
+    <button id=""mybtn>Click Me</button>
+    <script>
+        function displaymsg()
+        {
+            document.getElementById("myh1").innerHTML="Hello World"
+            document.getElementById("myh1").style.backgroundColor="red";
+            document.getElementById("myh1").style.color="white";
+        }
+function displaymsg2()
+{
+    document.getElementById("myh1").innerHTML="Hello World"
+            document.getElementById("myh1").style.backgroundColor="green";
+            document.getElementById("myh1").style.color="white";
+            setTimeout(dummytext,3000)
+}
+function dummytext(){
+     document.getElementById("myh1").innerHTML="Hello World"
+      document.getElementById("myh1").style.backgroundColor="white";
+     document.getElementById("myh1").style.color="black";
+
+}
+
+    </script>
+</body>
+</html>

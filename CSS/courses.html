@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses - Government Polytechnic for Women</title>
+
+<style>
+    
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+}
+
+.img1,.img2{
+    width:100px;
+    height:100px;
+}
+
+.main{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+h3{
+    margin-top:10px;
+}
+.navbar{
+    margin-top:30px;
+    background-color:green;
+    padding:20px;
+    text-align:center;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:white;
+    font-size:20px;
+    margin:0 35px;   
+}
+
+.dropdown{
+    display:inline-block;
+    position:relative;
+}
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:white;
+    min-width:160px;
+}
+.dropdown-content a{
+    display:block;
+    color:black;
+    padding:10px;
+    text-align:left;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+.course{
+    display:none;
+    margin:40px;
+    padding:25px;
+    border:2px solid green;
+    border-radius:10px;
+    background:#f9f9f9;
+}
+
+.course:target{
+    display:block;
+}
+
+.course h2{
+    color:green;
+}
+
+.course ul{
+    line-height:1.8;
+}
+
+</style>
+</head>
+
+<body>
+<div class="main">
+    <img class="img1" src="filePreview.jpg">
+    <h3>GOVERNMENT POLYTECHNIC FOR WOMEN, WARANGAL</h3>
+    <img class="img2" src="filePreview.jpg">
+</div>
+<div class="navbar">
+    <a href="task.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="dropdown">
+        <a href="courses.html">Courses ▾</a>
+        <div class="dropdown-content">
+            <a href="#cse">CSE</a>
+            <a href="#ece">ECE</a>
+            <a href="#eee">EEE</a>
+            <a href="#mech">MECH</a>
+            <a href="#civil">CIVIL</a>
+        </div>
+    </div>
+
+    <a href="alumini.html">Alumini</a>
+    <a href="career.html">Career</a>
+    <a href="contacts.html">Contact</a>
+</div>
+<div id="cse" class="course">
+    <h2>CSE - Computer Science Engineering</h2>
+    <p><strong>Duration:</strong> 3 Years Diploma</p>
+    <p>
+        The CSE department provides strong knowledge in programming,
+        artificial intelligence, data science, and software development.
+    </p>
+
+    <h3>Subjects:</h3>
+    <ul>
+        <li>Programming in C, C++, Java, Python</li>
+        <li>Data Structures</li>
+        <li>Database Management Systems</li>
+        <li>Operating Systems</li>
+        <li>Computer Networks</li>
+        <li>Artificial Intelligence</li>
+        <li>Web Technologies</li>
+    </ul>
+
+    <h3>Career Opportunities:</h3>
+    <p>Software Developer, Web Developer, Data Analyst, System Engineer.</p>
+</div>
+
+<div id="ece" class="course">
+    <h2>ECE - Electronics and Communication Engineering</h2>
+    <p><strong>Duration:</strong> 3 Years Diploma</p>
+    <p>
+        ECE focuses on communication systems, embedded systems,
+        and electronic circuit design.
+    </p>
+
+    <h3>Subjects:</h3>
+    <ul>
+        <li>Digital Electronics</li>
+        <li>Analog Electronics</li>
+        <li>Microprocessors</li>
+        <li>Communication Systems</li>
+        <li>Embedded Systems</li>
+    </ul>
+
+    <h3>Career Opportunities:</h3>
+    <p>Electronics Engineer, Telecom Engineer, Embedded Developer.</p>
+</div>
+
+<div id="eee" class="course">
+    <h2>EEE - Electrical and Electronics Engineering</h2>
+    <p><strong>Duration:</strong> 3 Years Diploma</p>
+    <p>
+        EEE deals with electrical machines, power generation,
+        transmission and control systems.
+    </p>
+
+    <h3>Subjects:</h3>
+    <ul>
+        <li>Electrical Machines</li>
+        <li>Power Systems</li>
+        <li>Control Systems</li>
+        <li>Power Electronics</li>
+    </ul>
+
+    <h3>Career Opportunities:</h3>
+    <p>Electrical Engineer, Power Plant Engineer, Maintenance Engineer.</p>
+</div>
+
+<div id="mech" class="course">
+    <h2>MECH - Mechanical Engineering</h2>
+    <p><strong>Duration:</strong> 3 Years Diploma</p>
+    <p>
+        Mechanical Engineering focuses on machines,
+        manufacturing, thermal systems and automobile engineering.
+    </p>
+
+    <h3>Subjects:</h3>
+    <ul>
+        <li>Thermodynamics</li>
+        <li>Fluid Mechanics</li>
+        <li>Machine Design</li>
+        <li>Manufacturing Technology</li>
+    </ul>
+
+    <h3>Career Opportunities:</h3>
+    <p>Mechanical Engineer, Production Engineer, Automobile Engineer.</p>
+</div>
+
+<div id="civil" class="course">
+    <h2>CIVIL - Civil Engineering</h2>
+    <p><strong>Duration:</strong> 3 Years Diploma</p>
+    <p>
+        Civil Engineering focuses on construction,
+        structural design and infrastructure development.
+    </p>
+
+    <h3>Subjects:</h3>
+    <ul>
+        <li>Structural Engineering</li>
+        <li>Surveying</li>
+        <li>Geotechnical Engineering</li>
+        <li>Environmental Engineering</li>
+    </ul>
+
+    <h3>Career Opportunities:</h3>
+    <p>Site Engineer, Structural Designer, Construction Manager.</p>
+</div>
+
+</body>
+</html>

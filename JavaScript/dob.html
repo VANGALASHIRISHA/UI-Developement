@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <label>Username: </label>
+    <input type="text" id="username" placeholder="Enter Username"><br><br>
+<label>DOB:</label><input type="number" id="dob" onchange="displaymsg()">&nbsp;<input type="text" id="res" disabled><br><br>
+    <label>Password: </label>
+    <input  type="password" id="password" placeholder="Enter Valid Password" pattern=[a-zA-z] {5,} required>
+    <br><br>
+    <button id="mybtn">Login</button>
+    <button>Cancel</button>
+</form>
+<script>
+    function displaymsg()
+    {
+       var dob=document.getElementById("dob").value;
+       var age =2026-dob;
+       document.getElementById("res").value="You  are "+age+" Years Old"
+    }
+</script>
+</body>
+</html>

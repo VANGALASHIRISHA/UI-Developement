@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    for(let i=1900;i<=2000;i++)
+    {
+        if(i%4==0 && i%100!==0||i%400==0)
+    {
+        console.log(`${i} is Leap Year`);
+    }
+        
+     }
+    var num=4;
+    isPrime=true;
+    for(let i=2;i<num;i++)
+    {
+        if(num%i==0)
+    {
+        isPrime=false;
+        break;
+    }
+    }
+    if(isPrime && num>1){
+        console.log("Prime Number");
+    }
+    else{
+        console.log("Not Prime")
+    }
+    var num=7;
+    isPrime=true;
+    if(num%2==0||num%3==0)
+    {
+        isPrime=false;
+    }
+    for(let i=5;i<num;i+=6){
+
+        if(num%i==0||num%(i+2)==0){
+            isPrime=false;
+            break;
+        }
+
+    }
+    if(isPrime&&num>1){
+        console.log("Prime Number");
+    }
+    else{
+        console.log("Not Prime")
+    }
+    var num=4
+    var count=0;
+    for(let i=1;i<=num;i++)
+    {
+        if(num%i==0)
+    {
+        count++;
+
+    }
+}
+    if(count==2)
+    {
+        console.log("IsPrime")
+
+    }
+    else{
+        console.log("Not Prime")
+    }
+
+
+    let i;
+    for( i=0;i<5;i++)
+    {
+        console.log(i);
+    }
+    console.log("5"- -"2");
+    
+  
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i=0;
+        while(i<=100){
+            console.log(i);
+            i++;
+        }
+
+        //No Of Digits in a Number
+        var num=1234;
+        count=0;
+        while(num!=0)
+        {
+             num=parseInt(num/10);
+            console.log(num);
+            count++;
+        } 
+        console.log("No Of Digits is  "+count)
+        //Calculate Sum of Digits
+        var num=1234;
+        var sum=0;
+        var rem=0
+        while(num!=0)
+        {
+            rem=num%10;
+            sum+=rem;
+            num=parseInt(num/10);
+        }
+console.log(sum);
+
+
+
+var num="0432"
+var rem=0,sum=""
+
+while(num!=0)
+{
+    rem=num%10;
+    sum+=rem;
+    num=parseInt(num/10);
+}
+console.log(sum);
+//Palidrome Number
+var num=121;
+var temp=num;
+var rem=0,sum=""
+
+while(num!=0)
+{
+    rem=num%10
+    sum+=rem;
+    num=parseInt(num/10)
+}
+console.log(sum);
+console.log(temp==sum?"palindrome":"Not Palindrome");
+if(temp==sum)
+{
+    console.log(temp+"  Number is Palindrome")
+}
+else{
+    console.log(sum+" Number is not Palindrome")
+}
+
+
+//Armstrong Number
+
+var num=153;
+var temp=num;
+var sum=0 ,rem=0;
+var count=0;
+while(num!=0)
+{
+    num=parseInt(num/10);
+    count++;
+    console.log("Number Of digits is"+count)
+}
+ num=temp
+while(num!=0)
+{
+    rem=num%10;
+    sum+=rem**count;
+    num=parseInt(num/10);
+}
+console.log(sum==temp ?"ArmstrongNumber":"NotArmstrongNumber");
+var i=1;
+do{
+    console.log(i);
+    i++;
+}
+
+while(i<=0)
+
+var arr=[5,7,12,30,46,42];
+var max=arr[0];
+ var min=arr[0];
+for( let i=0;i<=arr.length;i++){
+if(arr[i]>max)
+{
+    max=arr[i]; 
+}
+}
+console.log(max);
+if(arr[i]<min)
+{
+    min=arr[i];
+}
+console.log(min)
+
+var arr=[5,7,12,30,46,42];
+for(let i of arr)
+{
+    if(arr[i%2==0])
+    {
+        console.log(i)
+    }
+}
+var arr=[5,7,8];
+arr[7]=45
+console.log(arr.length)
+console.log(arr+1);
+var arr=[5,7,8,"bhaskara",null];
+console.log(arr*2);
+console.log(arr+1);
+
+function add(...a){
+    return a.reduce((acc,i)=>acc+i);
+}
+console.log(add(5,7,8,9,10,12,46,30));
+</script>
+</body>
+</html>

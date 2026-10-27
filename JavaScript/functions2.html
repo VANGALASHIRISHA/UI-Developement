@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let f=function(a,b){
+        c=a+b;
+        document.write("This is anonymous function  "+c);
+    }
+     f(10,5)
+    </script>
+<script>
+(function(a,b){
+    c=a+b;
+document.write("a= "+a+" b="+b+" Addition is "+c)
+})(3,8)
+</script>
+<script>
+let Addition=(a,b)=>{c=a+b; return c}
+document.write(Addition(3,6))
+</script>
+<script>
+let add=(a,b)=>a+b
+document.write(add(10,5))
+</script>
+</body>
+</html> -->

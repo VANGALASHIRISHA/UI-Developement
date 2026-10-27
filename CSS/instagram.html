@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Login</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+    }
+
+    .container {
+      background-color: white;
+      width: 350px;
+      padding: 40px 40px 20px 40px;
+      border: 1px solid #dbdbdb;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .logo {
+      font-family: 'Pacifico',cursive;
+      font-size: 40px;
+      margin-bottom: 30px;
+      color: #262626;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #dbdbdb;
+      border-radius: 5px;
+      background-color: #fafafa;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #0095f6;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .login-btn:hover {
+      background-color: #1877f2;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 20px 0;
+      color: #8e8e8e;
+      font-size: 14px;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid #dbdbdb;
+    }
+    .signup-box {
+      background-color: white;
+      width: 390px;
+      border: 1px solid #dbdbdb;
+      text-align: center;
+      padding: 20px;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #0095f6;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="container">
+      <h1 class="logo">Instagram</h1>
+
+      <form>
+        <input type="text" class="input-field" placeholder="Phone number, username, or email" required>
+        <input type="password" class="input-field" placeholder="Password" required>
+        <button class="login-btn">Log In</button>
+
+        <div class="divider">OR</div>
+
+        <a href="#">Forgot password?</a>
+      </form>
+    </div>
+
+    <div class="signup-box">
+      Don’t have an account? <a href="#">Sign up</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook – Create Account</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    .main-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 60px;
+    }
+
+   
+    .left-side h1 {
+      font-size: 55px;
+      color: #1877f2;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .left-side p {
+      font-size: 24px;
+      color: #1c1e21;
+      margin-top: 0;
+    }
+
+    /* SIGNUP BOX */
+    .signup-box {
+      background-color: #fff;
+      width: 430px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    p {
+      margin-top: 5px;
+      color: #606770;
+      font-size: 15px;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      border: 1px solid #ccd0d5;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .label-title {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #606770;
+      font-weight: bold;
+    }
+
+    .dob-row, .gender-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    select, .gender-box {
+      width: 32%;
+      padding: 12px;
+      border: 1px solid #ccd0d5;
+      border-radius: 6px;
+      font-size: 15px;
+      background-color: white;
+    }
+
+    .gender-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .signup-btn {
+      width: 60%;
+      margin: 20px auto 0;
+      display: block;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #42b72a;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      cursor: pointer;
+    }
+
+    .signup-btn:hover {
+      background-color: #36a420;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 10px;
+      color: #1877f2;
+      font-size: 17px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+
+    <!-- LEFT SIDE (FACEBOOK LOGO & TEXT) -->
+    <div class="left-side">
+      <h1>facebook</h1>
+      <p>Facebook helps you connect and share <br>with the people in your life.</p>
+    </div>
+
+    <!-- RIGHT SIDE SIGN UP BOX -->
+    <div class="signup-box">
+      <h2>Create a new account</h2>
+      <p>It's quick and easy.</p>
+      <hr>
+
+      <form>
+        <div class="input-row">
+          <input type="text" class="input-field" placeholder="First name" required>
+          <input type="text" class="input-field" placeholder="Surname" required>
+        </div>
+
+        <input type="text" class="input-field" placeholder="Mobile number or email address" required>
+        <input type="password" class="input-field" placeholder="New password" required>
+
+        <label class="label-title">Date of birth</label>
+        <div class="dob-row">
+          <select required>
+            <option>Day</option><option>1</option><option>2</option><option>3</option>
+          </select>
+
+          <select required>
+            <option>Month</option><option>Jan</option><option>Feb</option><option>Mar</option>
+          </select>
+
+          <select required>
+            <option>Year</option><option>1995</option><option>1996</option><option>1997</option>
+          </select>
+        </div>
+
+        <label class="label-title">Gender</label>
+        <div class="gender-row">
+          <label class="gender-box">Female <input type="radio" name="gender"></label>
+          <label class="gender-box">Male <input type="radio" name="gender"></label>
+          <label class="gender-box">Custom <input type="radio" name="gender"></label>
+        </div>
+
+        <button class="signup-btn">Sign Up</button>
+
+        <div class="login-link">
+          Already have an account?
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</body>
+</html>

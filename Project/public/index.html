@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClearVision</title>
+
+<style>
+    body{
+        margin: 0;
+        overflow-x: hidden;
+    }
+header{
+display:flex;
+border:2px solid aliceblue;
+background-color:aliceblue;
+padding:10px;
+}
+img{
+position:relative;
+left:20px;
+}
+.container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:#003366;
+}
+h2{
+position:relative;
+left:30px;
+}
+.nav{
+position:absolute;
+background-color:aliceblue;
+text-align:center;
+padding:20px;
+left:600px;
+font-size:18px;
+font-weight:bold;
+}
+.nav a{
+margin:0 15px;
+text-decoration:none;
+color:#003366;
+}
+hr{
+margin-top:-10px;
+}
+.eye{
+background-color:aliceblue;
+position:relative;
+}
+.text{
+position:absolute;
+top:45%;
+left:6%;
+color:#003366;
+}
+.text1{
+position:absolute;
+top:55%;
+left:6%;
+width:400px;
+color:#003366;
+font-size:17px;
+}
+.hello{
+display:flex;
+justify-content:space-between;
+background-color:#EEF8FD;
+padding:40px;
+}
+.mision{
+color:#003366;
+}
+.subpart{
+width:400px;
+color:#003366;
+}
+.cont{
+display:flex;
+justify-content:space-between;
+background:linear-gradient(to right,#5f8fb3,#1f3f5b);
+color:white;
+padding:40px;
+}
+ul{
+list-style:none;
+padding:0;
+}
+ul li{
+margin:6px 0;
+}
+.copy{
+ position: relative;
+top: -20px;
+text-align:center;
+background:linear-gradient(to right,#5f8fb3,#1f3f5b);
+color:white;
+padding:10px;
+}
+
+@media (max-width:900px){
+
+.text1{
+width:300px;
+}
+
+.hello{
+flex-direction:column;
+text-align:center;
+}
+
+.subpart{
+width:100%;
+}
+
+.hello img{
+margin-top:20px;
+}
+
+}
+
+@media (max-width:600px){
+
+header{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.nav{
+margin-left:0;
+margin-top:10px;
+display:flex;
+flex-direction:column;
+}
+
+.nav a{
+margin:8px 0;
+}
+
+.text{
+font-size:24px;
+top:35%;
+}
+
+.text1{
+font-size:14px;
+top:45%;
+width:90%;
+}
+
+.eye img{
+height:400px;
+}
+
+.cont{
+flex-direction:column;
+gap:20px;
+}
+
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<img src="icon.png" width="35px">
+<h2>ClearVison</h2>
+</div>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="doctors.html">Doctors</a>
+<a href="services.html">Services</a>
+<a href="appointment.html">Appointment</a>
+<a href="#contact">Contact Us</a>
+</nav>
+</header>
+<hr>
+<div class="eye">
+<img src="home.jpeg" width="100%" height="600px">
+<h1 class="text">Your Vision, Our Mission</h1>
+<p class="text1">
+ClearVision Eye Clinic provides world-class eye care with cutting-edge technology and compassionate specialists
+</p>
+</div>
+<div class="hello">
+<div>
+<h1 class="mision">See the World with Crystal Clarity</h1>
+<p class="subpart">
+At ClearVision Eye Clinic, we use the most advanced diagnostic technology to examine every detail of your eye health — from the iris to the retina.
+</p>
+</div>
+<div>
+<img src="eyee.png" width="400px">
+</div>
+</div>
+<footer>
+<div class="cont" id="contact">
+<div>
+<h2>ClearVision EyeClinic</h2>
+<p>Your trusted partner for comprehensive eye care and vision health</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<ul>
+<li>About Us</li>
+<li>Services</li>
+<li>Our Doctors</li>
+<li>Appointment</li>
+</ul>
+</div>
+
+<div>
+<h4>Services</h4>
+<ul>
+<li>Eye Checkup</li>
+<li>Cataract Surgery</li>
+<li>Retina Treatment</li>
+<li>Vision Testing</li>
+</ul>
+</div>
+
+<div>
+<h4>Contact Us</h4>
+<p>Ameenpur, Medchal City</p>
+<p>9912149306</p>
+<p>clearvision@gmail.com</p>
+</div>
+
+</div>
+
+<p class="copy">© 2026 ClearVision Eye Clinic. All rights reserved.</p>
+
+</footer>
+
+</body>
+</html>

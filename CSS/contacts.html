@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<style>
+    body{
+    margin:0;
+    font-family:Arial, sans-serif;
+}
+
+.img1,.img2{
+    width:100px;
+    height:100px;
+}
+
+.main{
+    display:flex;
+    justify-content:space-around;
+}
+
+h3{
+    margin-top:30px;
+}
+.navbar{
+    border:2px solid lightgreen;
+    margin-top:30px;
+    background-color:green;
+    padding:20px;
+    text-align:center;   
+}
+
+
+.navbar a{
+    text-decoration:none;
+    color:white;         
+    font-size:21px;
+    margin:0 50px;        
+}
+.container{
+    display:flex;
+    margin:50px;
+    gap:50px;
+}
+.form{
+    width:600px;
+    padding:30px;
+    border:2px solid green;
+    border-radius:10px;
+    background:#f4fff4;
+}
+.information{
+    width:600px;
+    padding:35px;
+    border-left:3px solid green;
+}
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0 20px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<div class="main">
+    <img class="img1" src="filePreview.jpg">
+    <h3>GOVERNMENT POLYTECHNIC FOR WOMEN,WARANGAL</h3>
+    <img class="img2" src="filePreview.jpg">
+</div>
+
+<div class="navbar">
+    <a href="task.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="courses.html">Courses</a>
+    <a href="alumini.html">Alumini</a>
+    <a href="career.html">Career</a>
+    <a href="contacts.html">Contact</a>
+</div>
+<div class="container">
+
+    
+    <div class="form">
+        <h3>Send Your Message</h3>
+
+        <form>
+            <label>Name:</label>
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Message:</label>
+            <textarea rows="5" placeholder="Write your message here"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+  
+    <div class="information">
+        <h3>Contact Information</h3>
+
+        <p><strong>College Name:</strong><br>
+        Government Polytechnic for Women</p>
+
+        <p><strong>Address:</strong><br>
+        Warangal, Telangana, India</p>
+
+        <p><strong>Phone:</strong><br>
+        +91 8008973152</p>
+
+        <p><strong>Email:</strong><br>
+        gpwwarangal@gmail.com</p>
+
+        <p><strong>Office Hours:</strong><br>
+        Monday – Saturday<br>
+        9:00 AM – 4:00 PM</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            background-color:aquamarine ;
+             border:2px solid aquamarine;
+        }
+        .main{
+            background-color:aquamarine;
+            padding: 20px;;
+        }
+        input{
+            border:solid 2px gray;
+            width:400px;
+            height: 30px;
+            font-size:15px;
+        }
+        label{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        button{
+            font-size: 16px;
+            font-weight: bold;
+            width:100px;
+            height: 40px;
+            padding:10px;
+            border:solid 2px gray;
+            border-radius: 5px;
+        }
+        /* h1{
+            color: aliceblue;
+        } */
+
+       
+    </style>
+    
+</head>
+<body>
+    <h1>Fixed Deposit Calculator</h1>
+    <div class="main">
+    <label>Name:</label>
+    <input type="text" name="name" id="name"><br><br>
+    <label>Amount:</label>
+    <input type="text" name="Amount" id="Amount"><br><br>
+    <label>Tenure:</label>
+    <input type="number" name="Tenure" id="Tenure"><br><br>
+     <label>Age:</label>
+    <input type="number" name="age" id="age"><br><br> 
+     <div class="result" id="result">
+    Status: Hey Name total maturity value is :
+  </div><br>
+    <button onclick="status()">Check</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="Cancel()">Cancel</button>
+    </div> 
+
+    <script>
+        function status()
+        {
+            let Uname=document.getElementById("name").value;
+            let amount=parseFloat(document.getElementById("Amount").value);
+            let  tenure=parseFloat(document.getElementById("Tenure").value);
+            let age=parseInt(document.getElementById("age").value);
+
+            var roi
+        if (age>60)
+        {
+            var roi=8;
+        }
+        else if(age>=25&&age<=60){
+            roi=7;
+    
+        }
+        else{
+            roi=6;
+        } 
+        let interest=(amount*roi*tenure)/100;
+        let maturity=amount+interest;
+        document.getElementById("result").innerHTML=
+        "Status:Hey"+Uname+",total maturity value is: "+maturity;
+    }
+       function Cancel()
+       {
+        document.getElementById("name").value="";
+        document.getElementById("Amount").value="";
+        document.getElementById("Tenure").value="";
+        document.getElementById("age").value="";
+        document.getElementById("result").innerHTML="Status:hey Name total maturity value is: ";
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eee;
+      text-align: center;
+    }
+    h2 {
+      color: #4B0082;
+      text-decoration: underline;
+    }
+    fieldset {
+      width: 600px;
+      margin: auto;
+      background-color: #6A5ACD;
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: left;
+    }
+    input, select, textarea {
+      margin-top: 5px;
+      margin-bottom: 10px;
+      padding: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    input[type="text"], input[type="number"], input[type="email"], select, textarea {
+      width: 60%;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      color: black;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 5px;
+      text-align: center;
+    }
+    input[type="submit"], input[type="reset"] {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      border-radius: 5px;
+      padding: 6px 15px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #4B0082;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>STUDENT REGISTRATION FORM</h2>
+
+  <form>
+    <fieldset>
+      <legend><b>Personal Information</b></legend>
+
+      FIRST NAME: <input type="text" maxlength="30" placeholder="Enter First Name"> (max 30 characters a-z and A-Z)<br>
+      LAST NAME: <input type="text" maxlength="30" placeholder="Enter Last Name"> (max 30 characters a-z and A-Z)<br><br>
+
+      DATE OF BIRTH:
+      <select>
+        <option>Day</option>
+        <option>1</option><option>2</option><option>3</option><option>4</option>
+        <option>5</option><option>6</option><option>7</option><option>8</option>
+      </select>
+      <select>
+        <option>Month</option>
+        <option>Jan</option><option>Feb</option><option>Mar</option><option>Apr</option>
+      </select>
+      <select>
+        <option>Year</option>
+        <option>2000</option><option>2001</option><option>2002</option><option>2003</option>
+      </select><br><br>
+
+      EMAIL ID: <input type="email" placeholder="Enter Email ID"><br>
+      MOBILE NUMBER: <input type="number" placeholder="Enter Mobile Number"> (10 digit number)<br><br>
+
+      GENDER:
+      <input type="radio" name="gender"> Male
+      <input type="radio" name="gender"> Female<br><br>
+
+      ADDRESS:<br>
+      <textarea rows="3" cols="40" placeholder="Enter Address"></textarea><br>
+
+      CITY: <input type="text" maxlength="30" placeholder="Enter City"> (max 30 characters a-z and A-Z)<br>
+      PIN CODE: <input type="text" maxlength="6" placeholder="Enter PIN Code"> (6 digit number)<br>
+      STATE: <input type="text" maxlength="30" placeholder="Enter State"> (max 30 characters a-z and A-Z)<br>
+      COUNTRY: <input type="text" value="India"><br><br>
+
+      HOBBIES:
+      <input type="checkbox"> Drawing
+      <input type="checkbox"> Singing
+      <input type="checkbox"> Dancing
+      <input type="checkbox"> Sketching
+      <input type="checkbox"> Others <input type="text"><br><br>
+
+      QUALIFICATION:
+      <table>
+        <tr>
+          <th>Sl.No.</th>
+          <th>Examination</th>
+          <th>Board</th>
+          <th>Percentage</th>
+          <th>Year of Passing</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Class X</td>
+          <td><input type="text" maxlength="10"></td>
+          <td><input type="text" maxlength="5"></td>
+          <td><input type="text" maxlength="4"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Class XII</td>
+          <td><input type="text" maxlength="10"></td>
+          <td><input type="text" maxlength="5"></td>
+          <td><input type="text" maxlength="4"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Graduation</td>
+          <td><input type="text" maxlength="10"></td>
+          <td><input type="text" maxlength="5"></td>
+          <td><input type="text" maxlength="4"></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Masters</td>
+          <td><input type="text" maxlength="10"></td>
+          <td><input type="text" maxlength="5"></td>
+          <td><input type="text" maxlength="4"></td>
+        </tr>
+      </table><br>
+
+      COURSES APPLIED FOR:
+      <input type="radio" name="course"> BCA
+      <input type="radio" name="course"> B.Com
+      <input type="radio" name="course"> B.Sc
+      <input type="radio" name="course"> B.A<br><br>
+
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </fieldset>
+  </form>
+
+</body>
+</html>
